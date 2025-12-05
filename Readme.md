@@ -18,7 +18,7 @@ db: store room
     status - 200 - success
              500 -- server error
              400 --  
-
+Day-2
 2/12/2025
 task
  hospital management- react
@@ -33,7 +33,7 @@ task
 4. fs module  -- write and read
    task to do --> append
 
-
+Day-3
 4/12/2025
 why nodejs
 1. fast  and scaleable, non-blocking
@@ -43,3 +43,17 @@ event loop-- mechanism handing asyc, callback and non-blocking operations/events
 1. path module
 3. Event-driven Architecture --  
 3. Event emitter
+
+
+Day-4
+5/12/2025
+REPL: READ EVAL PRINT LOOP
+CORS : MECHANISM CONTROLLING ACCESS TO RESOURCES FROM DIFFERENT ORIGINS.
+http and it's routing
+gitignore
+json- javascript object notation
+{
+   key : value
+}
+nodemon-used for live server
+gitignore
