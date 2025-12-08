@@ -57,3 +57,28 @@ json- javascript object notation
 }
 nodemon-used for live server
 gitignore
+
+node revision
+
+8/12/2025
+express
+mongodb
+mongoose
+
+db = schoolDb
+students - collections
+teachers
+staffs
+library
+
+students - collections created
+
+documets
+{
+name : '',
+age :    ,
+std : '',
+
+}
+[{},{}]
+
