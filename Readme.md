@@ -59,7 +59,7 @@ nodemon-used for live server
 gitignore
 
 node revision
-
+Day-5
 8/12/2025
 express
 mongodb
@@ -82,3 +82,28 @@ std : '',
 }
 [{},{}]
 
+
+ error handling
+mongodb : database
+          FEXIBLE structure
+          easy to understand
+          json formate
+
+students db
+similR TO JSON FORMATE 
+{
+name : "Manu",
+rollno : 345,
+age : 23,
+
+}
+
+node + mpongdb => moogose module 
+
+Day-6
+12/9/2025
+
+mvc
+model creation
+
+routing
