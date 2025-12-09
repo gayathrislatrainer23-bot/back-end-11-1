@@ -101,7 +101,9 @@ age : 23,
 node + mpongdb => moogose module 
 
 Day-6
-12/9/2025
+9/12/2025
+mongodb queries
+
 
 mvc
 model creation
