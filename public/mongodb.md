@@ -93,6 +93,8 @@ $regex
 3. $regex : 'A$'
 4. $regex : 'A' {$options: 'i'}
 
+12/11/1025
+
 Aggregate  - operations
 $match 
 $group
