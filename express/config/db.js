@@ -5,4 +5,6 @@ const connectDB  = async  () =>{
   .then(() => console.log('mongodb Connected!'))
   .catch((err)=>console.log(err))
 }
+
+
 module.exports = connectDB
