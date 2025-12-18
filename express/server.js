@@ -20,6 +20,7 @@ app.get('/test-api',(req,res)=>
 )
 
 app.use('/users',userRouter)
+
 const port = 5000;
 // 'localhost:5000/users/get-user'
  app.listen(port, ()=>{
