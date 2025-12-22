@@ -110,7 +110,6 @@ console.log(1)
 }
 
 
-
 }
 
 const sendData = (req,res)=>{
