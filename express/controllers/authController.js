@@ -48,9 +48,10 @@ if(!isMatch){
             message: 'credential error'
         })
 }else{
+    
 // jwt
 
-    const token = jwt.sign({email}, 'secretjwt11', { expiresIn: '1h' });
+    const token = jwt.sign({email},process.env.JWT_SECRET_KEY, { expiresIn: '1h' });
 
 
       res.status(200).json({

@@ -6,6 +6,8 @@ const errorHandler = require('./middleware/errorHandler')
 const userRouter = require('./routes/usersRouter')
 const authRouter = require('./routes/authRouter')
  app.use(express.json())
+const dotenv=require('dotenv')
+dotenv.config()
 
 // const connectDB  = async  () =>{
 
