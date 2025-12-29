@@ -1,6 +1,7 @@
 const User = require('../models/User')
 const bycrypt = require('bcrypt')
 const jwt  = require('jsonwebtoken')
+
 const UserRegister = async (req, res,next)=>{
     console.log('1') 
     const {userName, email,password,age} = req.body
@@ -22,7 +23,7 @@ console.log(hashedPassword)
         })
     }
           res.status(200).json({
-            message: 'user created sucessfully'
+            message: 'Registration sucessfull'
         })
 
     

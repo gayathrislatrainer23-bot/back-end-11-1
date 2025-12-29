@@ -15,8 +15,9 @@ if(req.headers.authorization && req.headers.authorization.startsWith("Bearer "))
     }
     try{
        const decorded =  jwt.verify(token, "secretjwt11")
-        console.log(decorded)
+        console.log('decorded:',decorded)
         req.user = decorded; 
+
 next()
     }catch(err){
  res.status(404).json(

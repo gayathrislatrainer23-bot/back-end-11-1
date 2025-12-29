@@ -1,12 +1,11 @@
 const express = require('express');
-
 const app = express();
 const connectDB = require('./config/db')
 const errorHandler = require('./middleware/errorHandler')
+const dotenv=require('dotenv')
 const userRouter = require('./routes/usersRouter')
 const authRouter = require('./routes/authRouter')
- app.use(express.json())
-const dotenv=require('dotenv')
+app.use(express.json())
 dotenv.config()
 
 connectDB()
@@ -21,8 +20,8 @@ app.use('/auth',authRouter)
 
 app.use(errorHandler)
 
-const port = 5000;
+// const port = 5000;
 // 'localhost:5000/users/get-user'
- app.listen(port, ()=>{
-    console.log('server is running')
+ app.listen(process.env.PORT, ()=>{
+    console.log(`server is running ${process.env.PORT}`)
  })
