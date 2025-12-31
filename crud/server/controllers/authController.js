@@ -4,27 +4,37 @@ const jwt  = require('jsonwebtoken')
 
 const UserRegister = async (req, res,next)=>{
     console.log('1') 
-    const {userName, email,password,age} = req.body
-    console.log(userName)
+    const {name,email,password} = req.body
+    console.log(req.body)
+    console.log(name)
     try{
-        // req.body--> data
-        //  password---> password hash
-        // db store  using queries ( hashed)
-        //  res message :  registation sucess
-        console.log('12')
- const hashedPassword = await bycrypt.hash(password, 10);  
-console.log(hashedPassword)
-     const createdUser = await  User.insertOne(
-         {name:userName,email, password : hashedPassword,age})
+          const userDetails = await User.findOne({email:email})
+  if(userDetails){
+   res.status(404).json({
+            message: 'user already exist'
+        })
+  }else{
 
-             if(!createdUser){
-        res.status(404).json({
-            message: 'Registration failed'
-        })
+      // req.body--> data
+      //  password---> password hash
+      // db store  using queries ( hashed)
+      //  res message :  registation sucess
+      console.log('12')
+    const hashedPassword = await bycrypt.hash(password, 10);  
+    console.log(hashedPassword)
+    const createdUser = await  User.insertOne(
+       {name:name,email, password : hashedPassword})
+    
+           if(!createdUser){
+      res.status(404).json({
+          message: 'Registration failed'
+      })
     }
-          res.status(200).json({
-            message: 'Registration sucessfull'
-        })
+        res.status(200).json({
+          message: 'Registration sucessfull'
+      })
+  }
+        
 
     
     }catch(err){
