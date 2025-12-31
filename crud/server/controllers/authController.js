@@ -36,12 +36,14 @@ console.log(hashedPassword)
 const  UserLogin = async (req,res,next)=>{
   const   {email, password} = req.body
     try{
+      // console.log('haii')
   const userDetails = await User.findOne({email:email})
   if(!userDetails){
    res.status(404).json({
             message: 'no such user'
         })
   }else{
+          console.log('haii')
     const hashedPassword = userDetails.password
  const isMatch = await bycrypt.compare(password, hashedPassword)
 if(!isMatch){
@@ -52,7 +54,7 @@ if(!isMatch){
     
 // jwt
 
-    const token = jwt.sign({email},process.env.JWT_SECRET_KEY, { expiresIn: '1h' });
+    const token = await jwt.sign({email},process.env.JWT_SECRET_KEY, { expiresIn: '1h' });
 
 
       res.status(200).json({

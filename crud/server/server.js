@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const connectDB = require('./config/db')
+const cors = require('cors')
 const errorHandler = require('./middleware/errorHandler')
 const dotenv=require('dotenv')
 const userRouter = require('./routes/usersRouter')
@@ -8,6 +9,10 @@ const authRouter = require('./routes/authRouter')
 app.use(express.json())
 dotenv.config()
 
+app.use(cors({
+  orgin: "http://localhost:5173/",
+  credentials: true
+}))
 connectDB()
 
 app.get('/test-api',(req,res)=>
