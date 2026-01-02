@@ -1,11 +1,22 @@
+import { useEffect } from "react"
 
 
 function Profile() {
+// user state
 
+useEffect(()=>{
+  // api
+setUser(res.data.existingUser)
+
+
+},[])
 
   return (
     <>
-      profile
+   <h1> profile</h1>
+   <p>{user.name}</p>
+   <p>{user.email}</p>
+   
     </>
   )
 }

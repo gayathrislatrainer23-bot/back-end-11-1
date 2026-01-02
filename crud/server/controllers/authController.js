@@ -46,7 +46,7 @@ const UserRegister = async (req, res,next)=>{
 const  UserLogin = async (req,res,next)=>{
   const   {email, password} = req.body
     try{
-      // console.log('haii')
+      console.log('haii')
   const userDetails = await User.findOne({email:email})
   if(!userDetails){
    res.status(404).json({
