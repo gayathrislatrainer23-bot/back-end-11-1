@@ -18,7 +18,11 @@ const userSchema =  new  mongoose.Schema({
     },
     age:{
        type:  Number
-    }  
+    }  ,
+    profilePic: {
+      type: String
+
+    }
     
 },{timesStamps: true})
 
