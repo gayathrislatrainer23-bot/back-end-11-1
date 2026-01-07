@@ -23,7 +23,7 @@ const UserRegister = async (req, res,next)=>{
       console.log('12')
       let profilePic;
       if(file){
-        profilePic = `http://localhost:5000/uploads/${req.file.filename}`
+        profilePic = `http://localhost:5000/uploads/${file.filename}`
       }
     const hashedPassword = await bycrypt.hash(password, 10);  
     console.log(hashedPassword)
@@ -36,7 +36,8 @@ const UserRegister = async (req, res,next)=>{
       })
     }
         res.status(200).json({
-          message: 'Registration sucessfull'
+          message: 'Registration sucessfull',
+          
       })
   }
         

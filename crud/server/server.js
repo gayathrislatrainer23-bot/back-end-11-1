@@ -6,7 +6,11 @@ const errorHandler = require('./middleware/errorHandler')
 const dotenv=require('dotenv')
 const userRouter = require('./routes/usersRouter')
 const authRouter = require('./routes/authRouter')
+
 app.use(express.json())
+//  Serve uploaded images
+app.use('/uploads', express.static('uploads'))
+
 dotenv.config()
 
 app.use(cors({

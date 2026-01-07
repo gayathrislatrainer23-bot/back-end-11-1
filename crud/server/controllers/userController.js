@@ -36,8 +36,21 @@ const updateUser = async (req,res)=>{
 
 
 
+const getProfile = async (req, res) => {
+  try {
+    const user = await User.findOne({email:req.user.email});
+    console.log(User)
+    res.json({ user });
+  } catch (err) {
+    res.status(500).json({ message: "Server error" });
+  }
+};
+
+
+
 module.exports = {
 
-    updateUser
+    updateUser,
+    getProfile
 
 }

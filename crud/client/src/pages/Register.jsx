@@ -35,8 +35,7 @@ console.log(profilePic)
    )
       if(res.status === 200){
         alert('registration sucess')
-        
-navigate('/login')
+     navigate('/profile')
       } 
           
   }catch(err){
@@ -53,10 +52,11 @@ console.log(err)
       <input type="text" placeholder="Enter your name" value={name} onChange={(e)=>setName(e.target.value)} /><br/>
       <input type="email" placeholder="Enter your email" value={email}  onChange={(e)=>setEmail(e.target.value)} /><br/>
       <input type="password" placeholder="Enter your password" value={password}  onChange={(e)=>setPassword(e.target.value)} /><br/>
-      <input type="file" onChange={handleFileChange}/><br/>
+      <input type="file"  onChange={handleFileChange}/><br/>
       <button>Register</button>
     </form>
-  {profilePreview && <img src={profilePreview}/>}
+{/* 
+  {profilePreview && <img src={profilePreview}/>} */}
     </>
   )
 }

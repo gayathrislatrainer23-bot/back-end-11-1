@@ -23,6 +23,7 @@ const userSchema =  new  mongoose.Schema({
       type: String
 
     }
+   //  role,isBlocked
     
 },{timesStamps: true})
 

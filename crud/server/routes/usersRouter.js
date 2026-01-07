@@ -5,6 +5,7 @@ const jwtMiddleware = require('../middleware/jwtMiddleware')
 
 
 router.put('/update_user/:id',jwtMiddleware, userController.updateUser)
+router.get("/profile",jwtMiddleware,userController.getProfile);
 
 // router.delete('/delete_user/:id', userController.deleteUser)
 // router.get('/get_user', (req,res)=>{})
