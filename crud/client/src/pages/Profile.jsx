@@ -10,7 +10,7 @@ console.log(user?.profilePic)
         console.log(res.data.user)
         setUser(res.data.user)})
       .catch(() => alert("Unauthorized"));
-  }, []);
+  },[]);
 
   if (!user) return <h3>Loading...</h3>;
 

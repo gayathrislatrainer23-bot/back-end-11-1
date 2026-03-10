@@ -92,7 +92,9 @@ $regex
 2. $regex : '^A'
 3. $regex : 'A$'
 4. $regex : 'A' {$options: 'i'}
-
+db.students.find({
+ disc: {$regex : 'A'}
+})
 12/11/1025
 
 Aggregate  - operations
@@ -212,4 +214,19 @@ mongoose queries
 2.findByIdAndUpdate
 3.findByIdAndDelete
 
+id = 1
+doc , 3
+mARKS= 40,30,50
+sumOfMarks : 120
 
+ID=2
+DOC= 3
+MARKS =40,70, 40
+140
+   {
+
+     $group : {_id : "$age", sumOfMarks :{$sum: "$marks"}}
+    }
+
+
+    
